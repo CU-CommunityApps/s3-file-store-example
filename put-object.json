@@ -1,0 +1,30 @@
+{
+    "ACL": "public-read", 
+    "Body": null, 
+    "Bucket": "", 
+    "CacheControl": "", 
+    "ContentDisposition": "", 
+    "ContentEncoding": "", 
+    "ContentLanguage": "", 
+    "ContentLength": 0, 
+    "ContentMD5": "", 
+    "ContentType": "", 
+    "Expires": "1970-01-01T00:00:00", 
+    "GrantFullControl": "", 
+    "GrantRead": "", 
+    "GrantReadACP": "", 
+    "GrantWriteACP": "", 
+    "Key": "", 
+    "Metadata": {
+        "KeyName": ""
+    }, 
+    "ServerSideEncryption": "aws:kms", 
+    "StorageClass": "REDUCED_REDUNDANCY", 
+    "WebsiteRedirectLocation": "", 
+    "SSECustomerAlgorithm": "", 
+    "SSECustomerKey": "", 
+    "SSECustomerKeyMD5": "", 
+    "SSEKMSKeyId": "", 
+    "RequestPayer": "requester", 
+    "Tagging": ""
+}
