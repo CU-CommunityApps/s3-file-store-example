@@ -62,7 +62,7 @@ Wait for dynamodb table to be created....
 DynamoDB table created: s3-file-store-example
 ```
 
-## 30-store-files.sh
+### 30-store-files.sh
 
 This script uploads the files in example-dir to S3 and creates a record for each in DynamoDB.
 
@@ -91,7 +91,7 @@ Created record in database
 Added tags to S3 object.
 ```
 
-## 40-validate-files.sh
+### 40-validate-files.sh
 
 This script retrieves the files in S3 and compares a newly computed MD5 hash to the one stored in the database.
 
@@ -102,7 +102,7 @@ Asset 45853: MD5 hash from DB matches MD5 has from retrieved file.
 Asset 110812: MD5 hash from DB matches MD5 has from retrieved file.
 ```
 
-## 50-search-example.sh
+### 50-search-example.sh
 
 This script shows and example of searching the DB by an metadata value, and retrieving a file from S3 based on that.
 
@@ -129,7 +129,7 @@ Got file from S3. Stored as tmp.jpeg.
 
 ```
 
-## 99-cleanup.sh
+### 99-cleanup.sh
 
 This script cleans up the resources from S3. As written, it leaves the S3 bucket in place.
 
@@ -155,3 +155,10 @@ Deleted s3://s3-file-store-example/60820d13-7f62-493a-a03b-5d0acb10374f
 }
 Deleted DynamoDB table: s3-file-store-example
 ````
+
+## Other Resources
+
+* https://aws.amazon.com/premiumsupport/knowledge-center/data-integrity-s3/
+* https://aws.amazon.com/blogs/aws/s3-storage-management-update-analytics-object-tagging-inventory-and-metrics/
+* https://aws.amazon.com/blogs/big-data/building-and-maintaining-an-amazon-s3-metadata-index-without-servers/
+* https://aws.amazon.com/blogs/database/indexing-metadata-in-amazon-elasticsearch-service-using-aws-lambda-and-python/
