@@ -1,19 +1,25 @@
 #!/bin/bash
+#
+# Create a database to use.
+#
 
 # setup environment
 source ./00-constants.sh
 
 set -e
-set -x
+# set -x
 
 # make dynamo DB table, in lieu of real DB
-
 aws dynamodb create-table \
     --table-name $DBTABLE \
     --attribute-definitions \
-        AttributeName=asset-id,AttributeType=S \
-        AttributeName=species,AttributeType=S \
+        AttributeName=assetId,AttributeType=S \
     --key-schema \
-        AttributeName=asset-id,KeyType=HASH \
-        AttributeName=species,KeyType=RANGE \
+        AttributeName=assetId,KeyType=HASH \
     --provisioned-throughput ReadCapacityUnits=1,WriteCapacityUnits=1
+    
+# Wait for table to finish creation    
+echo Wait for dynamodb table to be created....
+aws dynamodb wait table-exists --table-name $DBTABLE
+
+echo DynamoDB table created: $DBTABLE
